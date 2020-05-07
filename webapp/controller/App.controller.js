@@ -1,12 +1,17 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageToast"
+], function (Controller, MessageToast) {
 	"use strict";
 	return Controller.extend("opensap.myapp.controller.App", {
 		onShowHello: function () {
-			// show a native JavaScript alert
-			console.log("button clicked.");
-			alert("Hey there this is my first ui5 app.");
+			// read msg from i18n model
+			var oBundle = this.getView().getModel("i18n").getResourceBundle();
+			var sRecipient =
+				this.getView().getModel("helloPanel").getProperty("/recipient/name");
+			var sMsg = oBundle.getText("helloMsg", [sRecipient]);
+			// show message
+			MessageToast.show(sMsg);
 		}
 	});
 });

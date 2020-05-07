@@ -5,6 +5,7 @@
 		"id": "opensap.myapp",
 		"type": "application",
 		"title": "{{appTitle}}",
+		"i18n": "i18n/i18n.properties",
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
@@ -42,6 +43,19 @@
 				"sap.ui.layout": {
 					"minVersion": "1.34.0"
 				}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "opensap.myapp.i18n.i18n"
+				}
+			},
+
+			"helloPanel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/HelloPanel.json"
 			}
 		},
 		"contentDensities": {
