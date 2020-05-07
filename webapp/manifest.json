@@ -52,7 +52,10 @@
 					"bundleName": "opensap.myapp.i18n.i18n"
 				}
 			},
-
+			"address": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Address.json"
+			},
 			"helloPanel": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/HelloPanel.json"
