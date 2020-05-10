@@ -19,7 +19,7 @@ sap.ui.define([
 			// show message
 			MessageToast.show(sMsg);
 		},
-		
+
 		onFilterProducts: function (oEvent) {
 			// build filter array
 			var aFilter = [],
@@ -36,6 +36,6 @@ sap.ui.define([
 			// which will make all entries visible again
 			oBinding.filter(aFilter);
 		}
-	
+
 	});
 });
